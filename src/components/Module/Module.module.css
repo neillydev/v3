@@ -1,0 +1,75 @@
+.moduleContainer {
+  background: linear-gradient(0deg, #1c153c 30%, #311e76);
+}
+
+.moduleGridWrapper::before {
+  bottom: 0;
+  content: " ";
+  display: block;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  background: linear-gradient(hsla(0, 6%, 7%, 0) 50%, rgba(0, 0, 0, 0.25) 0),
+    linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0.06),
+      rgba(0, 255, 0, 0.02),
+      rgba(0, 0, 255, 0.06)
+    );
+  background-size: 100% 2px, 3px 100%;
+}
+
+.moduleGridWrapper {
+  opacity: 0;
+  filter: blur(0.5px);
+}
+
+.moduleGridSvg {
+  background: #311e76;
+  width: 100%;
+}
+
+.moduleText {
+  font-size: 12px;
+  dominant-baseline: hanging;
+  white-space: pre;
+}
+
+.moduleFadeIn {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #fff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
