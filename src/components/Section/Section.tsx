@@ -4,9 +4,10 @@ type SectionProps = {
   id: string;
   title: string;
   body: string;
+  module?: React.JSX.Element;
 };
 
-const Section = ({ id, title, body }: SectionProps) => {
+const Section = ({ id, title, body, module }: SectionProps) => {
   let paragraphs: string[] = [];
   if (body.includes("\\n")) {
     paragraphs = body.split("\\n");
@@ -31,6 +32,7 @@ const Section = ({ id, title, body }: SectionProps) => {
             : body}
         </p>
       </div>
+      {module ? module : null}
     </section>
   );
 };
