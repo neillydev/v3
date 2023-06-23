@@ -141,7 +141,7 @@ const Module = () => {
 
   return (
     <div
-      className={`${styles.moduleContainer} relative z-10 h-screen w-screen font-mono`}
+      className={`${styles.moduleContainer} relative z-10 h-screen w-screen`}
     >
       {isLoading ? (
         <span className={styles.loader}></span>
