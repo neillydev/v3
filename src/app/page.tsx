@@ -1,4 +1,4 @@
-import Module from '@/components/Module/Module';
+import Module from '@/components/Module/Module'
 
 import styles from './page.module.css';
 
