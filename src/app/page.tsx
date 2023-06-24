@@ -5,6 +5,7 @@ import Experience from "@/components/Experience/Experience";
 import Projects from "@/components/Projects/Projects";
 
 import styles from "./page.module.css";
+import Contact from "@/components/Contact/Contact";
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
           id="section_exp" 
           title="Contact" 
           body="" 
+          module={<Contact />}
         />
       </div>
     </main>
