@@ -14,7 +14,7 @@ const Section = ({ id, title, body, module }: SectionProps) => {
   }
 
   return (
-    <section className="flex flex-col gap-12 text-slate-300">
+    <section id={id} className="flex flex-col gap-12 text-slate-300">
       <div className="">
         <h1 className="relative flex text-3xl leading-none text-white">
           {title}

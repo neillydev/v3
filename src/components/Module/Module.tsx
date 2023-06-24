@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 
 import styles from "./Module.module.css";
 import Navigation from "../Navigation/Navigation";
@@ -22,10 +22,15 @@ const asciiArt = [
   "             /  |/ / _ \\/ / / / / / /",
   "            / /|  /  __/ / / / /_/ / ",
   "           /_/ |_/\\___/_/_/_/\\__, /  ",
-  "                            /____/    "
+  "                            /____/    ",
 ];
 
-const Module = () => {
+type ModuleProps = {
+  isLoading: boolean;
+  setIsLoading: Dispatch<SetStateAction<boolean>>;
+};
+
+const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
   const lines = 75;
   const lineLength = 200;
 
@@ -82,7 +87,6 @@ const Module = () => {
   });
 
   const [textContents, setTextContents] = useState(Array(lineLength).fill(""));
-  const [isLoading, setIsLoading] = useState(true);
 
   const [isAnimating, setIsAnimating] = useState(true);
   const [animationEndTime, setAnimationEndTime] = useState(
@@ -208,24 +212,26 @@ const Module = () => {
               })}
             </svg>
           </div>
-          <button className="flex gap-2 justify-center items-center w-fit font-medium basis-1 gap-2 justify-center items-center p-2 px-5 min-w-max text-sm font-bold text-center hover:.!text-[#09073a] hover:.bg-white hover:bg-opacity-100 active:bg-opacity-90 hover:.outline-white .outline  rounded-full hover:.outline-offset-4 active:.outline-offset-2 backdrop-blur-sm transition-all md:text-base outline-[#09073a]/50 absolute right-1/2 bottom-4 z-10 aspect-square translate-x-1/2 bg-slate-800/20 hover:bg-slate-700/50">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="2"
-              stroke="currentColor"
-              aria-hidden="true"
-              height="20"
-              className="inline text-slate-100"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
-              ></path>
-            </svg>
-          </button>
+          <a href="#about">
+            <button className="flex gap-2 justify-center items-center w-fit font-medium basis-1 gap-2 justify-center items-center p-2 px-5 min-w-max text-sm font-bold text-center hover:.!text-[#09073a] hover:.bg-white hover:bg-opacity-100 active:bg-opacity-90 hover:.outline-white .outline  rounded-full hover:.outline-offset-4 active:.outline-offset-2 backdrop-blur-sm transition-all md:text-base outline-[#09073a]/50 absolute right-1/2 bottom-4 z-10 aspect-square translate-x-1/2 bg-slate-800/20 hover:bg-slate-700/50">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                stroke="currentColor"
+                aria-hidden="true"
+                height="20"
+                className="inline text-slate-100"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+          </a>
           <Navigation />
         </>
       )}
