@@ -1,0 +1,18 @@
+.experienceTab {
+    border-left: 2px solid #edf2ff;
+    color: #edf2ff;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    font-size: 13px;
+    height: 42px;
+    padding: 0px 20px 2px;
+    text-align: left;
+}
+
+.experienceBodyContent {
+    margin-left: 20px;
+    transition: all 0.2s cubic-bezier(.17, .67, .83, .67);
+}
+
+.experienceBodyItem {
+    padding: 10px 5px;
+}
