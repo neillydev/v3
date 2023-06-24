@@ -19,18 +19,22 @@ const Section = ({ id, title, body, module }: SectionProps) => {
         <h1 className="relative flex text-3xl leading-none text-white">
           {title}
         </h1>
-        <br />
-        <p>
-          {paragraphs.length > 0
-            ? paragraphs.map((line: string) => (
-                <>
-                  {line}
-                  <br />
-                  <br />
-                </>
-              ))
-            : body}
-        </p>
+        {body ? (
+          <>
+            <br />
+            <p>
+              {paragraphs.length > 0
+                ? paragraphs.map((line: string) => (
+                    <>
+                      {line}
+                      <br />
+                      <br />
+                    </>
+                  ))
+                : body}
+            </p>
+          </>
+        ) : null}
       </div>
       {module ? module : null}
     </section>
