@@ -33,7 +33,7 @@ export default function Home() {
         <br />
         <Section 
           id="section_exp" 
-          title="What I've Created" 
+          title="What I've Built" 
           body="" 
           module={<Projects />}
         />
