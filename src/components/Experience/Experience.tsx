@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import styles from "./Experience.module.css";
 
 import BuildingSvg from "@/../../public/building.svg";
-import Image from "next/image";
 
 const Experience = () => {
   const [selected, setSelected] = useState(0);

@@ -1,0 +1,19 @@
+.overlay {
+    transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.cover {
+    max-width: 400px;
+}
+
+.descriptionWrapperRight {
+    right: 15%;
+}
+
+.descriptionWrapperLeft {
+    left: 15%;
+}
+
+.description {
+    max-width: 370px;
+}
