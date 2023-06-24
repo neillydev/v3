@@ -69,6 +69,7 @@ const Projects = () => {
           {project.technologies.map(
             (technology: string, index: number) => (
               <p
+                key={index}
                 className={
                   index === project.technologies.length - 1
                     ? ""
