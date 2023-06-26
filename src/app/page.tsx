@@ -34,7 +34,7 @@ export default function Home() {
         <br />
         <Section
           id="experience"
-          title="Where I've Been"
+          title="Where I've Worked"
           body=""
           module={<Experience />}
         />
