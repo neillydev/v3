@@ -23,7 +23,7 @@
 }
 
 .moduleGridWrapper {
-  opacity: 0;
+  opacity: 1;
   filter: blur(0.5px);
 }
 
@@ -74,11 +74,9 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    inset: 0;
   }
   100% {
     opacity: 1;
-    inset: 3rem;
   }
 }
 
@@ -87,6 +85,6 @@
       inset: 0.5rem;
     }
     100% {
-      inset: 3rem;
+      inset: 1rem;
     }
   }

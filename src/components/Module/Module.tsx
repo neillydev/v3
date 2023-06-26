@@ -173,7 +173,7 @@ const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
       ) : (
         <>
           <div
-            className={`${styles.moduleGridWrapper} ${styles.moduleFadeIn} absolute flex justify-center items-center overflow-hidden shadow-lg rounded-3xl inset-4 lg:inset-12 !bottom-36 md:!bottom-24`}
+            className={`${styles.moduleGridWrapper} ${styles.moduleFadeIn} absolute flex justify-center items-center overflow-hidden shadow-lg rounded-3xl inset-4 lg:inset-12 sm:inset-6 !bottom-36 md:!bottom-24`}
           >
             <svg
               id="bannerSVG"
