@@ -31,8 +31,9 @@ type ModuleProps = {
 };
 
 const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
-  const lines = 75;
-  const lineLength = 200;
+  const [lines, setLines] = useState(75);
+  const [lineLength, setLineLength] = useState(200);
+  const [viewBox, setViewBox] = useState('0 0 1455 976');
 
   const generateRandomChar = () => {
     const lowerCaseChars = "abcdefghijklmnopqrstuvwxyz /,";
@@ -59,7 +60,6 @@ const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
   const asciiArtStartPos =
     Math.floor(lineLength / 2) - Math.floor(asciiArt[0].length / 2);
 
-  // Store ASCII art separately
   const [asciiArtContent, setAsciiArtContent] = useState<Array<string>>([]);
 
   const [content, setContent] = useState(() => {
@@ -92,6 +92,27 @@ const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
   const [animationEndTime, setAnimationEndTime] = useState(
     performance.now() + 1000
   );
+
+  useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth <= 768;
+      if (isMobile) {
+        setViewBox('0 0 390 844');
+        setLines(60);
+        setLineLength(40);
+      } else {
+        setViewBox('0 0 1455 976');
+        setLines(75);
+        setLineLength(200);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     let newAsciiArtContent = Array(lines).fill("");
@@ -158,7 +179,7 @@ const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
               id="bannerSVG"
               xmlns="http://www.w3.org/2000/svg"
               version="1.1"
-              viewBox="0 0 1455 976"
+              viewBox={viewBox}
               className={styles.moduleGridSvg}
             >
               {textContents.map((_, i) => {
@@ -213,7 +234,7 @@ const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
             </svg>
           </div>
           <a href="#about">
-            <button className="flex gap-2 justify-center items-center w-fit font-medium basis-1 gap-2 justify-center items-center p-2 px-5 min-w-max text-sm font-bold text-center hover:.!text-[#09073a] hover:.bg-white hover:bg-opacity-100 active:bg-opacity-90 hover:.outline-white .outline  rounded-full hover:.outline-offset-4 active:.outline-offset-2 backdrop-blur-sm transition-all md:text-base outline-[#09073a]/50 absolute right-1/2 bottom-4 z-10 aspect-square translate-x-1/2 bg-slate-800/20 hover:bg-slate-700/50">
+            <button className="hidden md:flex gap-2 justify-center items-center w-fit font-medium basis-1 gap-2 justify-center items-center p-2 px-5 min-w-max text-sm font-bold text-center hover:.!text-[#09073a] hover:.bg-white hover:bg-opacity-100 active:bg-opacity-90 hover:.outline-white .outline  rounded-full hover:.outline-offset-4 active:.outline-offset-2 backdrop-blur-sm transition-all md:text-base outline-[#09073a]/50 absolute right-1/2 bottom-4 z-10 aspect-square translate-x-1/2 bg-slate-800/20 hover:bg-slate-700/50">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
