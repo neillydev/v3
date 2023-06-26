@@ -38,12 +38,6 @@
   white-space: pre;
 }
 
-@media only screen and (max-width: 768px) {
-  .moduleText {
-    font-size: 16px;
-  }
-}
-
 .moduleFadeIn {
   animation: fadeIn 1s ease-in-out forwards, setIn 1.5s ease-out forwards;
 }
@@ -88,3 +82,12 @@
       inset: 1rem;
     }
   }
+
+@media only screen and (max-width: 768px) {
+  .moduleText {
+    font-size: 16px;
+  }
+  .moduleFadeIn {
+    animation: fadeIn 1s ease-in-out forwards !important;
+  }
+}
