@@ -60,13 +60,13 @@ const Experience = () => {
           </button>
         ))}
       </div>
-      <div className={`${styles.experienceBodyContent} relative w-full`}>
+      <div className={`${styles.experienceBodyContent} relative w-full mx-0 md:ml-5`}>
         <div className={`${styles.experienceBodyItem} w-full h-auto`}>
           <div className="flex">
             {experienceArray[selected].company && (
               <BuildingSvg className="stroke-purple-500 mr-2" />
             )}
-            <h3>
+            <h3 className="text-sm md:text-base">
               {experienceArray[selected].title} @{" "}
               {(experienceArray[selected].company ||
                 experienceArray[selected].companyName) && (
@@ -87,7 +87,7 @@ const Experience = () => {
               )}
             </h3>
           </div>
-          <p className="my-2">{experienceArray[selected].duration}</p>
+          <p className="my-2 text-sm md:text-base">{experienceArray[selected].duration}</p>
           <ul className="my-4">
             {experienceArray[selected].achievements.map(
               (achievement: string) => (

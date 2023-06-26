@@ -2,7 +2,7 @@ import React from 'react'
 
 const Technologies = () => {
   return (
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-2 gap-4 whitespace-pre text-xs	md:grid-cols-3 md:text-base">
       <p>• ReactJS</p>
       <p>• NextJS</p>
       <p>• Vue.js</p>
