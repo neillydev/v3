@@ -10,7 +10,7 @@ const Experience = () => {
 
   const experienceArray = [
     {
-      title: "Software Engineer",
+      title: "Software Engineer II",
       duration: "Nov. 2022 - Present",
       achievements: ["No achievements found (yet!)"],
       company: true,
