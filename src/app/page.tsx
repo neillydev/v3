@@ -9,6 +9,13 @@ import styles from "./page.module.css";
 import Contact from "@/components/Contact/Contact";
 import { useState } from "react";
 
+/**
+ * 
+ * @returns 
+ * TO DO: 
+ * 
+ */
+
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   return (
@@ -24,7 +31,7 @@ export default function Home() {
           title="Who Am I?"
           body="I'm Vernon Neilly, and I simply love programming. Since I were young, I've been captivated by the internet and computers, always eager to dig deeper into how it all works behind the scenes.
           \n
-          Starting from scratch, I taught myself how to build websites using HTML, Javascript, and CSS. This led me down a path where I started building plugins and web applications, first as a freelancer for a wide range of clients, and later as a part of larger teams in multiple corporate settings.
+          Starting from scratch, I taught myself how to build websites using HTML, Javascript, and CSS. This led me down a path where I started building plugins and web applications, first as a freelancer for a wide range of clients, and later as a developer in larger teams in multiple corporate settings.
           \n
           The knowledge and experience that I've gathered over the years across these various avenues have equipped me with a proficiency in delivering effective solutions.
           \n
