@@ -29,8 +29,8 @@ const Navigation = () => {
             Contact
           </button>
         </a>
-        <a href="https://github.com/neillydev" target="_blank" className="mr-4"><GithubSVG className="fill-white hover:opacity-75" /></a>
-        <a href="https://linkedin.com/in/neillydev" target="_blank"><LinkedInSVG className="fill-white hover:opacity-75" /></a>
+        <a href="https://github.com/neillydev" target="_blank" className="hidden mr-4 md:flex"><GithubSVG className="fill-white hover:opacity-75" /></a>
+        <a href="https://linkedin.com/in/neillydev" target="_blank"><LinkedInSVG className="hidden md:flex fill-white hover:opacity-75" /></a>
       </div>
     </div>
   );
