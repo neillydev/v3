@@ -24,7 +24,7 @@ const Navigation = () => {
             Projects
           </button>
         </a>
-        <a href="#contact" className="mr-8">
+        <a href="#contact" className="mr-4">
           <button className="mx-2 flex gap-2 justify-center items-center w-fit font-medium basis-1 gap-2 justify-center items-center p-2 px-5 min-w-max text-sm font-bold text-center hover:.!text-[#09073a] hover:.bg-white hover:bg-opacity-100 active:bg-opacity-90 hover:.outline-white .outline  rounded-full hover:.outline-offset-4 active:.outline-offset-2 backdrop-blur-sm transition-all md:text-base outline-[#09073a]/50 bg-violet-500/20 text-rose-50 hover:bg-violet-500">
             Contact
           </button>
