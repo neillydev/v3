@@ -1,5 +1,4 @@
 import React from "react";
-import resumePDF from '@/../public/resume.pdf';
 
 import GithubSVG from "@/../public/github.svg";
 import LinkedInSVG from "@/../public/linkedin.svg";
@@ -7,7 +6,7 @@ import LinkedInSVG from "@/../public/linkedin.svg";
 const Navigation = () => {
 
   const handleOpenResume = () => {
-    window.open(resumePDF, '_blank');
+    window.open('', '_blank');
   };
 
   return (
