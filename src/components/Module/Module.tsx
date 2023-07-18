@@ -96,10 +96,13 @@ const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
   useEffect(() => {
     const handleResize = () => {
       const isMobile = window.innerWidth <= 768;
+      const isDesktop = window.innerWidth >= 768;
       if (isMobile) {
         setViewBox('0 0 390 844');
         setLines(60);
         setLineLength(40);
+      } else if (isDesktop) {
+        setViewBox('0 0 1300 976');
       } else {
         setViewBox('0 0 1455 976');
         setLines(75);
