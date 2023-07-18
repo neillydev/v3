@@ -12,7 +12,12 @@ const Experience = () => {
     {
       title: "Software Engineer II",
       duration: "Nov. 2022 - Present",
-      achievements: ["No achievements found (yet!)"],
+      achievements: [
+        "Pioneered the adoption and integration of machine learning models for automating media content, enabling the automatic generation of videos, resulting in a remarkable 35% uptick in publisher video production, improving publisher engagement.",
+        "Devised and implemented an algorithm capable of identifying and calculating trending search terms amongst publishers across diverse intervals, enhancing the company's ability to respond quickly to dynamic media-search trends.",
+        "Refactored critical Golang backend API modules alongside the development of various front-end Vue.js components, significantly improving user experience and code maintainability, as well as ensuring seamless integration with existing and future systems.",
+        "Implemented serverless functions with a API using OpenFAAS, integrating machine learning libraries with a robust Golang backend.",
+      ],
       company: true,
       companyName: "Ezoic",
       companyLink: "https://ezoic.com",
