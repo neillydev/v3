@@ -13,12 +13,10 @@
   top: 0;
   z-index: 2;
   background: linear-gradient(hsla(0, 6%, 7%, 0) 50%, rgba(0, 0, 0, 0.25) 0),
-    linear-gradient(
-      90deg,
+    linear-gradient(90deg,
       rgba(255, 0, 0, 0.06),
       rgba(0, 255, 0, 0.02),
-      rgba(0, 0, 255, 0.06)
-    );
+      rgba(0, 0, 255, 0.06));
   background-size: 100% 2px, 3px 100%;
 }
 
@@ -60,6 +58,7 @@
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -69,25 +68,44 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
 
 @keyframes setIn {
-    0% {
-      inset: 0.5rem;
-    }
-    100% {
-      inset: 1rem;
-    }
+  0% {
+    inset: 0.5rem;
   }
+
+  100% {
+    inset: 1rem;
+  }
+}
+
+@keyframes setInDesktop {
+  0% {
+    inset: 0.5rem;
+  }
+
+  100% {
+    inset: 3rem;
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .moduleText {
     font-size: 16px;
   }
+
   .moduleFadeIn {
     animation: fadeIn 1s ease-in-out forwards !important;
+  }
+}
+
+@media (min-width: 1450px) {
+  .moduleFadeIn {
+    animation: fadeIn 1s ease-in-out forwards, setInDesktop 1.5s ease-out forwards;
   }
 }
