@@ -29,7 +29,7 @@ export default function Home() {
         <Section
           id="about"
           title="Who Am I?"
-          body="I'm Vernon Neilly, and I simply love programming. Since I were young, I've been captivated by the internet and computers, always eager to dig deeper into how it all works behind the scenes.
+          body="I'm Vernon Neilly, and I simply love programming. From a young age, I've been captivated by the internet and computers, always eager to dig deeper into how it all works behind the scenes.
           \n
           Starting from scratch, I taught myself how to build websites using HTML, Javascript, and CSS. This led me down a path where I started building plugins and web applications, first as a freelancer for a wide range of clients, and later as a developer in larger teams in multiple corporate settings.
           \n
