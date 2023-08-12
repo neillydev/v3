@@ -11,7 +11,7 @@ const Experience = () => {
   const experienceArray = [
     {
       title: "Software Engineer II",
-      duration: "Nov. 2022 - Present",
+      duration: "Nov. 2022 - Jul. 2023",
       achievements: [
         "Pioneered the adoption and integration of machine learning models for automating media content, enabling the automatic generation of videos, resulting in a remarkable 35% uptick in publisher video production, improving publisher engagement.",
         "Devised and implemented an algorithm capable of identifying and calculating trending search terms amongst publishers, enhancing my team's ability to respond quickly to media-search trends.",
