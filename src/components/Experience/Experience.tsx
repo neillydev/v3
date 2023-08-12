@@ -41,9 +41,9 @@ const Experience = () => {
       title: "Software Developer",
       duration: "Jan. 2016 - May 2022",
       achievements: [
-        "Created a backend API in NodeJS, Express, MySQL, and Typescript which handled authentication using JSON Web Tokens.",
-        "Engineered and maintained an API for a referral system, resulting in thousands of customer acquisitions, leveraging NodeJS, Express, and PostgreSQL",
-        "Developed Java plugins for multiple clients",
+        "Developed responsive and interactive web user interfaces using JavaScript, HTML, and CSS, and React.",
+        "Created multiple full-stack web applications for various clients leveraging React, Next.js, NodeJS, Express, MySQL, and Typescript",
+        "Designed and maintained custom e-commerce Shopify stores for clients, utilizing React, and Node.js.",
       ],
       company: false,
       companyName: "Freelance",
