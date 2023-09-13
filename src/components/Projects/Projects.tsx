@@ -9,6 +9,14 @@ const Projects = () => {
   const projectsArray = [
     {
       github: "",
+      url: "https://github.com/neillydev/vern",
+      cover: "https://img001.prntscr.com/file/img001/f-o1nE4HTSOM_QPeNfl-jQ.png",
+      title: "VERN.",
+      description: "AI For People: Bridging the Gap, Unlocking Potential",
+      technologies: ["React", "Python", "NextJS", "Typescript"],
+    },
+    {
+      github: "",
       url: "https://gitme.app",
       cover: "https://i.imgur.com/45ELxNs.png",
       title: "GitMe",
@@ -24,7 +32,7 @@ const Projects = () => {
         "Live short-form video-based social media app that allows users to create, watch, and share videos",
       technologies: ["React", "NextJS", "Typescript", "PostgreSQL"],
     },
-    {
+    /* {
       github: "",
       url: "https://github.com/neillydev/covidmaps",
       cover:
@@ -32,11 +40,11 @@ const Projects = () => {
       title: "Covid Maps",
       description: "Real-time COVID-19 case map built with React",
       technologies: ["React", "Google Maps API"],
-    },
+    }, */
   ];
 
   return projectsArray.map((project: any, index: number) => (
-    <div key={index} className={`${index % 2 !== 0 ? "justify-end" : ""} flex my-4`}>
+    <div key={index} className={`${index % 2 !== 0 ? "" : "justify-end"} flex my-4`}>
       <div className="relative opacity-75 cursor-pointer">
         <a
           href={project.url}
@@ -54,7 +62,7 @@ const Projects = () => {
         </a>
       </div>
       <div
-        className={`${index % 2 !== 0 ? styles.descriptionWrapperLeft : styles.descriptionWrapperRight} absolute flex flex-col text-right ${index % 2 !== 0 ? "items-start" : "items-end"}`}
+        className={`${index % 2 !== 0 ? styles.descriptionWrapperRight : styles.descriptionWrapperLeft } absolute flex flex-col text-right ${index % 2 !== 0 ? "items-end" : "items-start" }`}
       >
         <h2 className="text-purple-400 text-xs whitespace-nowrap mb-1">
           Featured Project
