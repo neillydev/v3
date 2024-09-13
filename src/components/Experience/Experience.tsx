@@ -10,6 +10,22 @@ const Experience = () => {
 
   const experienceArray = [
     {
+      title: "Founding Software Engineer",
+      duration: "Apr. 2024 - Sep. 2024",
+      achievements: [],
+      company: true,
+      companyName: "Onetera",
+      companyLink: "https://onetera.com",
+    },
+    {
+      title: "Senior Software Engineer",
+      duration: "Oct. 2023 - Apr. 2024",
+      achievements: [],
+      company: true,
+      companyName: "Rivian",
+      companyLink: "https://rivian.com",
+    },
+    {
       title: "Software Engineer II",
       duration: "Nov. 2022 - Jul. 2023",
       achievements: [
@@ -65,7 +81,9 @@ const Experience = () => {
           </button>
         ))}
       </div>
-      <div className={`${styles.experienceBodyContent} relative w-full mx-0 md:ml-5`}>
+      <div
+        className={`${styles.experienceBodyContent} relative w-full mx-0 md:ml-5`}
+      >
         <div className={`${styles.experienceBodyItem} w-full h-auto`}>
           <div className="flex">
             {experienceArray[selected].company && (
@@ -92,7 +110,9 @@ const Experience = () => {
               )}
             </h3>
           </div>
-          <p className="my-2 text-sm md:text-base">{experienceArray[selected].duration}</p>
+          <p className="my-2 text-sm md:text-base">
+            {experienceArray[selected].duration}
+          </p>
           <ul className="my-4">
             {experienceArray[selected].achievements.map(
               (achievement: string) => (
