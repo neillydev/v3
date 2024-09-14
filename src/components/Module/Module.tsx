@@ -33,7 +33,7 @@ type ModuleProps = {
 const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
   const [lines, setLines] = useState(75);
   const [lineLength, setLineLength] = useState(200);
-  const [viewBox, setViewBox] = useState('0 0 1455 976');
+  const [viewBox, setViewBox] = useState("0 0 1455 976");
 
   const generateRandomChar = () => {
     const lowerCaseChars = "abcdefghijklmnopqrstuvwxyz /,";
@@ -44,6 +44,7 @@ const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
       ? " "
       : chars[Math.floor(Math.random() * chars.length)];
   };
+
   const generateActivePositions = (length: number, spacePercentage: number) => {
     let activePositions = [];
 
@@ -96,15 +97,12 @@ const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
   useEffect(() => {
     const handleResize = () => {
       const isMobile = window.innerWidth <= 768;
-      const isDesktop = window.innerWidth >= 768;
       if (isMobile) {
-        setViewBox('0 0 390 844');
+        setViewBox("0 0 390 844");
         setLines(60);
         setLineLength(40);
-      } else if (isDesktop) {
-        setViewBox('0 0 1300 976');
       } else {
-        setViewBox('0 0 1455 976');
+        setViewBox("0 0 1455 976");
         setLines(75);
         setLineLength(200);
       }
@@ -112,9 +110,9 @@ const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
 
     handleResize();
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
@@ -127,6 +125,30 @@ const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
     });
     setAsciiArtContent(newAsciiArtContent);
   }, [lines, lineLength, asciiArtStartLine, asciiArtStartPos, asciiArt]);
+
+  useEffect(() => {
+    const initialContent = Array(lines)
+      .fill(null)
+      .map((_, lineIndex) => {
+        const activePositions = generateActivePositions(lineLength, 50);
+        return activePositions.map((position) => {
+          const isAscii =
+            lineIndex >= asciiArtStartLine &&
+            lineIndex < asciiArtStartLine + asciiArt.length &&
+            position >= asciiArtStartPos &&
+            position < asciiArtStartPos + asciiArt[0].length;
+          return {
+            position,
+            char: isAscii ? " " : generateRandomChar(),
+            isAscii,
+            nextUpdate: performance.now() + generateRandomDelay(),
+            delay: generateRandomDelay(),
+          };
+        });
+      });
+
+    setContent(initialContent);
+  }, [lines, lineLength, asciiArtStartLine, asciiArtStartPos]);
 
   useEffect(() => {
     setTimeout(() => setIsLoading(false), 1000);
@@ -185,22 +207,13 @@ const Module = ({ isLoading, setIsLoading }: ModuleProps) => {
               viewBox={viewBox}
               className={styles.moduleGridSvg}
             >
-              {textContents.map((_, i) => {
-                const lineContent = content[i];
-                let lineChars;
-                if (lineContent) {
-                  lineChars = lineContent.reduce(
-                    (lineText, { position, char }) => {
-                      lineText[position] = char;
-                      return lineText;
-                    },
-                    Array(lineLength).fill(" ")
-                  );
-                } else {
-                  lineChars = Array(lineLength).fill(" ");
-                }
+              {content.map((lineContent, i) => {
+                const lineChars = Array(lineLength).fill(" ");
+                lineContent.forEach(({ position, char }) => {
+                  lineChars[position] = char;
+                });
 
-                const asciiArtLine = asciiArtContent[i];
+                const asciiArtLine = asciiArtContent[i] || "";
                 let asciiLine = "";
                 let normalLine = "";
                 lineChars.forEach((char, j) => {
