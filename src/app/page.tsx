@@ -10,10 +10,10 @@ import Contact from "@/components/Contact/Contact";
 import { useState } from "react";
 
 /**
- * 
- * @returns 
- * TO DO: 
- * 
+ *
+ * @returns
+ * TO DO:
+ *
  */
 
 export default function Home() {
@@ -29,13 +29,9 @@ export default function Home() {
         <Section
           id="about"
           title="Who Am I?"
-          body="I'm Vernon Neilly, and I simply love programming. From a young age, I've been captivated by the internet and computers, always eager to dig deeper into how it all works behind the scenes.
+          body="Hi.
           \n
-          Starting from scratch, I taught myself how to build websites using HTML, Javascript, and CSS. This led me down a path where I started building plugins and web applications, first as a freelancer for a wide range of clients, and later as a developer in larger teams in multiple corporate settings.
-          \n
-          The knowledge and experience that I've gathered over the years across these various avenues have equipped me with a proficiency in delivering effective solutions.
-          \n
-          Below are technologies I work with consistently:"
+          I’m Vernon, a Software Engineer with 8+ years of experience in full-stack development using JavaScript (React, Next.js), Python, Golang, and Node.js. I specialize in building scalable SaaS applications, designing APIs and microservices, and integrating Machine Learning models. My work focuses on leveraging cloud-based services (AWS and Google Cloud) to build high-performance systems that deliver real-world impact!"
           module={<Technologies />}
         />
         <br />
