@@ -31,7 +31,9 @@ export default function Home() {
           title="Who Am I?"
           body="Hi.
           \n
-          I’m Vernon, a Software Engineer with 8+ years of experience in full-stack development using JavaScript (React, Next.js), Python, Golang, and Node.js. I specialize in building scalable SaaS applications, designing APIs and microservices, and integrating Machine Learning models. My work focuses on leveraging cloud-based services (AWS and Google Cloud) to build high-performance systems that deliver real-world impact!"
+          I’m Vernon, a Software Engineer with 8+ years of experience in full-stack development using JavaScript (React, Next.js), Python, Golang, and Node.js. I specialize in building scalable SaaS applications, designing APIs and microservices, and integrating Machine Learning models. My work focuses on leveraging cloud-based services (AWS and Google Cloud) to build high-performance systems that deliver real-world impact!
+          \n
+          Take a look at my work and let's connect!"
           module={<Technologies />}
         />
         <br />
