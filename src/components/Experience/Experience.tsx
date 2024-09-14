@@ -12,7 +12,12 @@ const Experience = () => {
     {
       title: "Founding Software Engineer",
       duration: "Apr. 2024 - Sep. 2024",
-      achievements: [],
+      achievements: [
+        "Spearheaded the system design and development of an AI-based chat application for local government services using LangChain and Large Language Models (GPT-4/Llama).",
+        "Implemented Retrieval Augmented Generation (RAG) to enhance information accuracy and relevance, built on a stack comprising React.js, Next.js (App Router), and Python/Flask.",
+        "Integrated Amazon Neptune with Flask to create a scalable graph database using Gremlin, significantly boosting the efficiency and precision of data retrieval processes for the LLM models.",
+        "Collaborated with stakeholders, including local government officials and property developers, to define application requirements and ensure alignment with user needs.",
+      ],
       company: true,
       companyName: "Onetera",
       companyLink: "https://onetera.com",
@@ -20,7 +25,11 @@ const Experience = () => {
     {
       title: "Senior Software Engineer",
       duration: "Oct. 2023 - Apr. 2024",
-      achievements: [],
+      achievements: [
+        "Developed and optimized a scalable React and JS-based web application called Akeso, implementing a central service and manufacturing interface, resulting in a 60% improvement within all provisioning and operations across the company.",
+        "Engineered a Django-based backend API using Python that enables interaction between printed circuit boards and Rivian’s rapid charging stations, streamlining the communication process.",
+        "Implemented critical core libraries for an in-house operating system with C++, contributing to a 10% improvement in system efficiency.",
+      ],
       company: true,
       companyName: "Rivian",
       companyLink: "https://rivian.com",
