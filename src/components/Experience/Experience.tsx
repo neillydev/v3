@@ -10,6 +10,14 @@ const Experience = () => {
 
   const experienceArray = [
     {
+      title: "Staff Software Engineer",
+      duration: "Nov. 2024 - Present",
+      achievements: [],
+      company: true,
+      companyName: "Western Alliance Bank",
+      companyLink: "https://www.westernalliancebancorporation.com",
+    },
+    {
       title: "Founding Software Engineer",
       duration: "Apr. 2024 - Sep. 2024",
       achievements: [
