@@ -36,58 +36,54 @@ const Projects = () => {
     },
   ];
 
-  return projectsArray.map((project: any, index: number) => (
-    <div
-      key={index}
-      className={`relative flex ${
-        index % 2 !== 0 ? "" : "justify-end"
-      } min-h-[260px] mb-10`}
-    >
-      {/* 🔒 IMAGE + OVERLAY BLOCK UNCHANGED */}
-      <div className="relative opacity-75 cursor-pointer">
-        <a href={project.url} target="_blank" rel="noopener noreferrer">
-          <div
-            className={`${styles.overlay} w-full h-full absolute inset-0 bg-purple-600 opacity-50 hover:opacity-0`}
-          />
-          <img className={`${styles.cover}`} src={project.cover} alt="" />
-        </a>
-      </div>
+  return projectsArray.map((project: any, index: number) => {
+    const isGitMe = index === 1;
 
-      {/* description / text overlay */}
+    return (
       <div
-        className={`${
-          index % 2 !== 0
-            ? styles.descriptionWrapperRight
-            : styles.descriptionWrapperLeft
-        } absolute flex flex-col text-right ${
-          index % 2 !== 0 ? "items-end" : "items-start"
+        key={index}
+        className={`flex items-center gap-10 mb-10 ${
+          isGitMe ? "flex-row-reverse" : "flex-row"
         }`}
       >
-        <h2 className="text-purple-400 text-xs whitespace-nowrap mb-1">
-          Featured Project
-        </h2>
-        <h3 className="text-xl whitespace-nowrap">{project.title}</h3>
-        <div
-          className={`${styles.description} w-full bg-purple-600 rounded-sm p-5 my-4`}
+        <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="relative opacity-75 hover:opacity-100 cursor-pointer shrink-0"
         >
-          <p className="text-xs">{project.description}</p>
+          <div
+            className={`${styles.overlay} absolute inset-0 bg-purple-600 opacity-50 hover:opacity-0`}
+          />
+          <img className={styles.cover} src={project.cover} alt="" />
+        </a>
+        <div
+          className={`flex flex-col ${
+            isGitMe ? "items-start text-left" : "items-start text-left"
+          } max-w-[420px]`}
+        >
+          <h2 className="text-purple-400 text-xs whitespace-nowrap mb-1">
+            Featured Project
+          </h2>
+          <h3 className="text-xl whitespace-nowrap">{project.title}</h3>
+
+          <div
+            className={`${styles.description} w-full bg-purple-600 rounded-sm p-5 my-4`}
+          >
+            <p className="text-xs">{project.description}</p>
+          </div>
+
+          <div className="text-xs flex flex-wrap gap-x-4 gap-y-2">
+            {project.technologies.map(
+              (technology: string, techIndex: number) => (
+                <p key={techIndex}>{technology}</p>
+              )
+            )}
+          </div>
         </div>
-        <div className="text-xs flex">
-          {project.technologies.map((technology: string, techIndex: number) => (
-            <p
-              key={techIndex}
-              className={
-                techIndex === project.technologies.length - 1 ? "" : "mr-4"
-              }
-            >
-              {technology}
-            </p>
-          ))}
-        </div>
-        <div className=""></div>
       </div>
-    </div>
-  ));
+    );
+  });
 };
 
 export default Projects;
